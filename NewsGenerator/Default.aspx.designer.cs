@@ -148,6 +148,24 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_wins_2v2_1;
         
         /// <summary>
+        /// chk_intro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_intro;
+        
+        /// <summary>
+        /// dropdown_intro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_intro;
+        
+        /// <summary>
         /// chk_mannered control.
         /// </summary>
         /// <remarks>
@@ -182,5 +200,32 @@ namespace NewsGenerator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropdown_unmannered;
+        
+        /// <summary>
+        /// chk_toolate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_toolate;
+        
+        /// <summary>
+        /// dropdown_toolate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_toolate;
+        
+        /// <summary>
+        /// btn_genNews control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_genNews;
     }
 }

@@ -52,6 +52,10 @@
                     <td>Textbausteine:</td>
                 </tr>
                 <tr>
+                     <td><asp:CheckBox ID="chk_intro" runat="server" Text="intro" /></td>
+                        <td><asp:DropDownList ID="dropdown_intro" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
+                </tr>
+                <tr>
                         <td><asp:CheckBox ID="chk_mannered" runat="server" Text="mannered" /></td>
                         <td><asp:DropDownList ID="dropdown_mannered" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
                 </tr>
@@ -59,7 +63,12 @@
                      <td><asp:CheckBox ID="chk_unmannered" runat="server" Text="unmannered" /></td>
                         <td><asp:DropDownList ID="dropdown_unmannered" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
                 </tr>
-            </table>
+                <tr>
+                     <td><asp:CheckBox ID="chk_toolate" runat="server" Text="zu spät" /></td>
+                        <td><asp:DropDownList ID="dropdown_toolate" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
+                </tr>
+            </table><br />
+            <asp:Button ID="btn_genNews" runat="server" Text="News generieren" />
         </asp:Panel>
     </div>
     </form>

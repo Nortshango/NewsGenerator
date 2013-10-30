@@ -70,11 +70,17 @@ namespace NewsGenerator
             dropdown_wins_2v2_1.DataBind();
 
             //TEXT
+            dropdown_intro.DataSource = db.GetText("intro");
+            dropdown_intro.DataBind();
+
             dropdown_mannered.DataSource = db.GetText("mannered");
             dropdown_mannered.DataBind();
 
             dropdown_unmannered.DataSource = db.GetText("unmannered");
             dropdown_unmannered.DataBind();
+
+            dropdown_toolate.DataSource = db.GetText("toolate");
+            dropdown_toolate.DataBind();
 
         }
 
