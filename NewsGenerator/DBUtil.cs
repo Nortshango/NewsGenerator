@@ -54,6 +54,14 @@ namespace NewsGenerator
             return FillDataSet(cmd, "Player");
         }
 
+        public DataSet GetRace(string player) 
+        {
+            string query = "SELECT Race FROM Player where Name = @Player;";
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.AddWithValue("@Player", player);
+            return FillDataSet(cmd, "Race");
+        }
+
         public DataSet GetWins()
         {
             string query = "SELECT * FROM Wins";

@@ -40,6 +40,24 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_liga;
         
         /// <summary>
+        /// txtbox_output control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtbox_output;
+        
+        /// <summary>
+        /// chk_opponentfromdatabase control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_opponentfromdatabase;
+        
+        /// <summary>
         /// dropdown_gegner control.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,24 @@ namespace NewsGenerator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropdown_gegner;
+        
+        /// <summary>
+        /// chk_opponentfromtextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_opponentfromtextbox;
+        
+        /// <summary>
+        /// txt_Opponent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Opponent;
         
         /// <summary>
         /// dropdown_spieler_1v1_1 control.
@@ -58,6 +94,24 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_spieler_1v1_1;
         
         /// <summary>
+        /// chk_held1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_held1;
+        
+        /// <summary>
+        /// chk_noob1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_noob1;
+        
+        /// <summary>
         /// dropdown_spieler_1v1_2 control.
         /// </summary>
         /// <remarks>
@@ -65,6 +119,24 @@ namespace NewsGenerator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropdown_spieler_1v1_2;
+        
+        /// <summary>
+        /// chk_held2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_held2;
+        
+        /// <summary>
+        /// chk_noob2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_noob2;
         
         /// <summary>
         /// dropdown_spieler_1v1_3 control.
@@ -76,6 +148,24 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_spieler_1v1_3;
         
         /// <summary>
+        /// chk_held3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_held3;
+        
+        /// <summary>
+        /// chk_noob3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_noob3;
+        
+        /// <summary>
         /// dropdown_spieler_1v1_4 control.
         /// </summary>
         /// <remarks>
@@ -83,6 +173,24 @@ namespace NewsGenerator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropdown_spieler_1v1_4;
+        
+        /// <summary>
+        /// chk_held4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_held4;
+        
+        /// <summary>
+        /// chk_noob4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_noob4;
         
         /// <summary>
         /// dropdown_wins_1v1_1 control.
@@ -121,6 +229,42 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_wins_1v1_4;
         
         /// <summary>
+        /// dropdown_losses_1v1_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_losses_1v1_1;
+        
+        /// <summary>
+        /// dropdown_losses_1v1_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_losses_1v1_2;
+        
+        /// <summary>
+        /// dropdown_losses_1v1_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_losses_1v1_3;
+        
+        /// <summary>
+        /// dropdown_losses_1v1_4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_losses_1v1_4;
+        
+        /// <summary>
         /// dropdown_spieler_2v2_1 control.
         /// </summary>
         /// <remarks>
@@ -128,6 +272,24 @@ namespace NewsGenerator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropdown_spieler_2v2_1;
+        
+        /// <summary>
+        /// chk_held5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_held5;
+        
+        /// <summary>
+        /// chk_noob5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_noob5;
         
         /// <summary>
         /// dropdown_spieler_2v2_2 control.
@@ -139,6 +301,24 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_spieler_2v2_2;
         
         /// <summary>
+        /// chk_held6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_held6;
+        
+        /// <summary>
+        /// chk_noob6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_noob6;
+        
+        /// <summary>
         /// dropdown_wins_2v2_1 control.
         /// </summary>
         /// <remarks>
@@ -146,6 +326,15 @@ namespace NewsGenerator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropdown_wins_2v2_1;
+        
+        /// <summary>
+        /// dropdown_losses_2v2_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_losses_2v2_1;
         
         /// <summary>
         /// chk_intro control.
@@ -218,6 +407,24 @@ namespace NewsGenerator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropdown_toolate;
+        
+        /// <summary>
+        /// txt_Autor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Autor;
+        
+        /// <summary>
+        /// txt_Kommentar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Kommentar;
         
         /// <summary>
         /// btn_genNews control.
