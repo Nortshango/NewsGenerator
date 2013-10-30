@@ -1,0 +1,3 @@
+NewsGenerator
+=============
+important news !
