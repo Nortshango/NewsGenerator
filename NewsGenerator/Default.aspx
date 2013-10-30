@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
         <asp:Panel ID="Panel1" runat="server">
-            <h1>News Generator v0.001</h1>
+            <h1>News Generator v0.002</h1>
             <table>
                 <tr>
                     <td style="width:100px;">Liga:</td>
