@@ -11,7 +11,7 @@ namespace NewsGenerator
 {
     public class DBUtil
     {
-        private string connectionString;
+        public string connectionString;
 
         public DBUtil()
         {
