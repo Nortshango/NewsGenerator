@@ -330,6 +330,7 @@ namespace NewsGenerator
                 s.Append(txt_Kommentar.Text);
                 s.Append("</p>");
             }
+            s.Append("{jcomments on}");
             txtbox_output.Text = s.ToString();
                  
         }
