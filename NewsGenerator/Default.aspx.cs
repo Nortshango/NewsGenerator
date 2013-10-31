@@ -127,8 +127,8 @@ namespace NewsGenerator
             {
                 s.Append(dropdown_gegner.SelectedItem.Text);
             }
-            if (chk_opponentfromtextbox.Checked) {
-                s.Append(txtbox_output.Text);
+            else {
+                s.Append(txt_gegner.Text);
             }
             s.Append(": "); 
 
