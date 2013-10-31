@@ -76,13 +76,13 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.CheckBox chk_opponentfromtextbox;
         
         /// <summary>
-        /// txt_Opponent control.
+        /// txt_gegner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Opponent;
+        protected global::System.Web.UI.WebControls.TextBox txt_gegner;
         
         /// <summary>
         /// dropdown_spieler_1v1_1 control.

@@ -15,7 +15,9 @@ namespace NewsGenerator
 
         public DBUtil()
         {
-            var uriString = ConfigurationManager.AppSettings["SQLSERVER_URI"];
+            //var uriString = ConfigurationManager.AppSettings["SQLSERVER_URI"];
+            var uriString = @"sqlserver://gvhdololevszhtrr:SFKVMCRy3NV4q5T4vuVCweR5WsBasETZEU2HoHzTmHmt6cMeGZT4imTMXP7uaRgw@86e95deb-3cb3-4729-80f7-a26600bf1e84.sqlserver.sequelizer.com/db86e95deb3cb3472980f7a26600bf1e84";
+           
             var uri = new Uri(uriString);
             connectionString = new SqlConnectionStringBuilder
             {

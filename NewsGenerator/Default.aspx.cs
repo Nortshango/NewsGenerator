@@ -14,12 +14,15 @@ namespace NewsGenerator
 {
     public partial class Default : System.Web.UI.Page
     {
-        
+
+        public int wins = 0;
+        public int losses = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
                 initFields();
-                txt_Opponent.Enabled = false;
+                txt_gegner.Enabled = false;
             }
         }
 
@@ -106,36 +109,79 @@ namespace NewsGenerator
         {
             DBUtil db = new DBUtil();
             StringBuilder s = new StringBuilder();
-            //s.Append(dropdown_liga.SelectedItem.Text);
+
+            checkResult();
+
+
 
             //INTRO
-            if (chk_intro.Checked) {
-                s.Append("<p style='font-size:14px;font-weight:bold'>");
-                s.Append(dropdown_intro.SelectedItem.Value);
-                s.Append("</p><br />");
-            }
 
-            //TEXT A
+            s.Append("<p style='font-size:14px;font-weight:bold'>");
+            s.Append(dropdown_liga.SelectedItem.Text);
+            s.Append(" versus ");
+            if (chk_opponentfromdatabase.Checked)
+            {
+                s.Append(dropdown_gegner.SelectedItem.Text);
+            }
+            else {
+                s.Append(txtbox_output.Text);
+            }
+            s.Append(": "); 
+
+            if (chk_intro.Checked) {
+                s.Append(dropdown_intro.SelectedItem.Value);
+            }
+            s.Append("</p><br />");
+            
 
             //ERG
             //s.Append("<table style='width: 95%;'><tr><td style='width: 50%;'>");
             s.Append("<table style='border: 1px solid #b9b9b9; width: 95%; height: 0px;' frame='box' rules='none' border='1' cellpadding='1' cellspacing='0'>");
+
+            s.Append("<tr style='height: 30px;background-color:lightgray;font-variant:small-caps;font-weight:bold;'><td style='text-align: center;'>");
+            s.Append("WSB vs ");
+            if (chk_opponentfromdatabase.Checked)
+            {
+                s.Append(dropdown_gegner.SelectedItem.Text);
+            }
+            else
+            {
+                s.Append(txtbox_output.Text);
+            }
+            s.Append("</td><td></td>");
+            if (losses > wins)
+            {
+                s.Append("<td style='background-color:Crimson;text-align: center;'>");
+            }
+            if (wins > losses)
+            {
+                s.Append("<td style='background-color:limeGreen;text-align: center;'>");
+            }
+            if (losses == wins)
+            {
+                s.Append("<td style='background-color:darkgray;text-align: center;'>");
+            }
+            s.Append(wins);
+            s.Append(":");
+            s.Append(losses);
+            s.Append("</td></tr>");
+            
             s.Append("<tr style='height: 30px;'><td style='text-align: center;'>");
             
             s.Append(dropdown_spieler_1v1_1.SelectedItem.Text);
             if (chk_held1.Checked)
             {
-                s.Append(" ist Held des Tages.<img src='App_Data/krone.png' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' />");
             }
             if (chk_noob1.Checked)
             {
-                s.Append(" ist Noob des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' src='images/ranking/");
             DataSet ds = db.GetRace(dropdown_spieler_1v1_1.SelectedItem.Text);
             DataRow dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
-            s.Append(".png' /></td><td>");
+            s.Append(".png' /></td><td style='text-align: center;'>");
             s.Append(dropdown_wins_1v1_1.SelectedItem.Text);
             s.Append(":");
             s.Append(dropdown_losses_1v1_1.SelectedItem.Text);
@@ -145,17 +191,17 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_1v1_2.SelectedItem.Value);
             if (chk_held2.Checked)
             {
-                s.Append(" ist Held des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' />");
             }
             if (chk_noob2.Checked)
             {
-                s.Append(" ist Noob des Tages.<img src='App_Data/noob.png' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' src='images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_2.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
-            s.Append(".png' /></td><td>");
+            s.Append(".png' /></td><td style='text-align: center;'>");
             s.Append(dropdown_wins_1v1_2.SelectedItem.Text);
             s.Append(":");
             s.Append(dropdown_losses_1v1_2.SelectedItem.Text);
@@ -165,17 +211,17 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_1v1_3.SelectedItem.Value);
             if (chk_held3.Checked)
             {
-                s.Append(" ist Held des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' />");
             }
             if (chk_noob3.Checked)
             {
-                s.Append(" ist Noob des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' src='images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_3.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
-            s.Append(".png' /></td><td>");
+            s.Append(".png' /></td><td style='text-align: center;'>");
             s.Append(dropdown_wins_1v1_3.SelectedItem.Text);
             s.Append(":");
             s.Append(dropdown_losses_1v1_3.SelectedItem.Text);
@@ -185,17 +231,17 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_1v1_4.SelectedItem.Value);
             if (chk_held4.Checked)
             {
-                s.Append(" ist Held des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' />");
             }
             if (chk_noob4.Checked)
             {
-                s.Append(" ist Noob des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' src='images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_4.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
-            s.Append(".png' /></td><td>");
+            s.Append(".png' /></td><td style='text-align: center;'>");
             s.Append(dropdown_wins_1v1_4.SelectedItem.Text);
             s.Append(":");
             s.Append(dropdown_losses_1v1_4.SelectedItem.Text);
@@ -205,21 +251,21 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_2v2_1.SelectedItem.Value);
             if (chk_held5.Checked)
             {
-                s.Append(" ist Held des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' />");
             }
             if (chk_noob5.Checked)
             {
-                s.Append(" ist Noob des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' />");
             }
             s.Append(" & ");
             s.Append(dropdown_spieler_2v2_2.SelectedItem.Value);
             if (chk_held6.Checked)
             {
-                s.Append(" ist Held des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' />");
             }
             if (chk_noob6.Checked)
             {
-                s.Append(" ist Noob des Tages.");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' />");
             }
             s.Append("</td><td style='text-align:center;'>");
             s.Append("<img height='20px' src='images/ranking/");
@@ -232,24 +278,19 @@ namespace NewsGenerator
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
             s.Append(".png' />");
-            s.Append("</td>");
-            s.Append("<td>");
+            s.Append("</td><td style='text-align: center;'>");
             s.Append(dropdown_wins_2v2_1.SelectedItem.Text);
             s.Append(":");
             s.Append(dropdown_losses_2v2_1.SelectedItem.Text);
             s.Append("</td></tr>");
+
             s.Append("</table>");
             //s.Append("</td><td style='padding:10px;'>");
 
-            s.Append("<p>*Noob des Tages, *Held des Tages<br />");
-
-
-
-
-
-
-
-
+            if (chk_held1.Checked || chk_held2.Checked || chk_held3.Checked || chk_held4.Checked || chk_held5.Checked || chk_held6.Checked)
+            {
+                s.Append("<p style='font-size:smaller;'>*<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='10' />Noob des Tages, *<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='10' />Held des Tages<br /></p>");
+            }
             //s.Append("</td></tr></table><br />");
             //TEXT B
 
@@ -276,20 +317,65 @@ namespace NewsGenerator
             //KOMMENTAR
             if (txt_Kommentar.Text != "")
             {
-                s.Append("<br /><br />Kommentar");
+                s.Append("<br /><br /><p style='font-size:small; font-style: italic;'>Kommentar");
             }
             if (txt_Autor.Text != "") {
                 s.Append(" von ");
                 s.Append(txt_Autor.Text);
             }
+            s.Append(":</p>");
             if (txt_Kommentar.Text != "")
             {
-                s.Append(":<br/><p style='padding:10px; width:95%; border:1px dashed black; background-color:lightgray; color:black;'>");
+                s.Append("<p style='padding:10px; width:95%; border:1px dashed black; background-color:lightgray; color:black;'>");
                 s.Append(txt_Kommentar.Text);
                 s.Append("</p>");
             }
             txtbox_output.Text = s.ToString();
                  
+        }
+
+        private void checkResult()
+        {
+            if (Int32.Parse(dropdown_wins_1v1_1.SelectedItem.Text) == 2)
+            {
+                wins++;
+            }
+            if (Int32.Parse(dropdown_losses_1v1_1.SelectedItem.Text) == 2)
+            {
+                losses++;
+            }
+            if (Int32.Parse(dropdown_wins_1v1_2.SelectedItem.Text) == 2)
+            {
+                wins++;
+            }
+            if (Int32.Parse(dropdown_losses_1v1_2.SelectedItem.Text) == 2)
+            {
+                losses++;
+            }
+            if (Int32.Parse(dropdown_wins_1v1_3.SelectedItem.Text) == 2)
+            {
+                wins++;
+            }
+            if (Int32.Parse(dropdown_losses_1v1_3.SelectedItem.Text) == 2)
+            {
+                losses++;
+            }
+            if (Int32.Parse(dropdown_wins_1v1_4.SelectedItem.Text) == 2)
+            {
+                wins++;
+            }
+            if (Int32.Parse(dropdown_losses_1v1_4.SelectedItem.Text) == 2)
+            {
+                losses++;
+            }
+            if (Int32.Parse(dropdown_wins_2v2_1.SelectedItem.Text) == 2)
+            {
+                wins++;
+            }
+            if (Int32.Parse(dropdown_losses_2v2_1.SelectedItem.Text) == 2)
+            {
+                losses++;
+            }
         }
 
 
@@ -304,7 +390,7 @@ namespace NewsGenerator
             {
                 chk_opponentfromtextbox.Checked = false;
 
-                txt_Opponent.Enabled = false;
+                txt_gegner.Enabled = false;
             }
         }
 
@@ -317,7 +403,7 @@ namespace NewsGenerator
             else
             {
                 chk_opponentfromdatabase.Checked = false;
-                txt_Opponent.Enabled = true;
+                txt_gegner.Enabled = true;
             }
         }
 
@@ -583,7 +669,7 @@ namespace NewsGenerator
                 chk_noob1.Enabled = true;
             }
         }
-
+        /*
         protected void chk_mannered_CheckedChanged(object sender, EventArgs e)
         {
             if (chk_mannered.Checked)
@@ -609,7 +695,7 @@ namespace NewsGenerator
                 chk_mannered.Enabled = true;
                 dropdown_mannered.Enabled = true;
             }
-        }
+        }*/
 
 
     }

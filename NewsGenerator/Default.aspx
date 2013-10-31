@@ -13,7 +13,7 @@
         <asp:Panel ID="Panel1" runat="server" BorderColor="DarkGray" BackColor="LightGray" CssClass="Panel">
            <div class="CSSTableGenerator">
             <table>
-                <tr><td colspan="4">News Generator Beta v0.02 <img src="App_Data/krone.png" /></td><td style="width:500px">Output</td></tr>
+                <tr><td colspan="4">News Generator Beta v0.04</td><td style="width:500px">Output</td></tr>
                 <tr>
                     <td><b>Liga:</b></td>
                     <td colspan="3"><asp:DropDownList ID="dropdown_liga" runat="server" DataTextField="Name"></asp:DropDownList></td>
@@ -26,7 +26,7 @@
                     <td colspan="3">
                         Database<br />
                         <asp:CheckBox ID="chk_opponentfromdatabase" runat="server" Checked="true" OnCheckedChanged="chk_opponentfromdatabase_CheckedChanged" AutoPostBack="true" /><asp:DropDownList ID="dropdown_gegner" runat="server" DataTextField="Name"></asp:DropDownList>
-                     <br /> Manuell<br />   <asp:CheckBox ID="chk_opponentfromtextbox" runat="server" OnCheckedChanged="chk_opponentfromtextbox_CheckedChanged" AutoPostBack="true" /><asp:TextBox ID="txt_Opponent" runat="server"></asp:TextBox>
+                     <br /> Manuell<br />   <asp:CheckBox ID="chk_opponentfromtextbox" runat="server" OnCheckedChanged="chk_opponentfromtextbox_CheckedChanged" AutoPostBack="true" /><asp:TextBox ID="txt_gegner" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -74,12 +74,12 @@
                    
                 </tr>
                 <tr>
-                        <td><asp:CheckBox ID="chk_mannered" runat="server" Text="mannered" AutoPostBack="true" OnCheckedChanged="chk_mannered_CheckedChanged" /></td>
+                        <td><asp:CheckBox ID="chk_mannered" runat="server" Text="mannered" /></td>
                         <td colspan="3"><asp:DropDownList ID="dropdown_mannered" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
                     
                 </tr>
                 <tr>
-                     <td><asp:CheckBox ID="chk_unmannered" runat="server" Text="unmannered" AutoPostBack="true" OnCheckedChanged="chk_unmannered_CheckedChanged" /></td>
+                     <td><asp:CheckBox ID="chk_unmannered" runat="server" Text="unmannered"/></td>
                         <td colspan="3"><asp:DropDownList ID="dropdown_unmannered" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
                    
                 </tr>
