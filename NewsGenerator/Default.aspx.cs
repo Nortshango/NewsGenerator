@@ -394,11 +394,11 @@ namespace NewsGenerator
             if (chk_opponentfromtextbox.Checked == false)
             {
 
-                chk_opponentfromdatabase.Checked = true;
+                chk_opponentfromtextbox.Checked = true;
             }
             else
             {
-                chk_opponentfromdatabase.Checked = false;
+                chk_opponentfromtextbox.Checked = true;
             }
         }
 
@@ -406,11 +406,11 @@ namespace NewsGenerator
         {
             if (chk_opponentfromdatabase.Checked == false)
             {
-                chk_opponentfromtextbox.Checked = true;
+                chk_opponentfromdatabase.Checked = true;
             }
             else
             {
-                chk_opponentfromtextbox.Checked = false;
+                chk_opponentfromdatabase.Checked = false;
             }
         }
 
