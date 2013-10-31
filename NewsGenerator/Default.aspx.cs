@@ -150,7 +150,7 @@ namespace NewsGenerator
             }
             else
             {
-                s.Append(txtbox_output.Text);
+                s.Append(txt_gegner.Text);
             }
             s.Append("</td><td></td>");
             if (losses > wins)
@@ -293,7 +293,7 @@ namespace NewsGenerator
 
             if (chk_held1.Checked || chk_held2.Checked || chk_held3.Checked || chk_held4.Checked || chk_held5.Checked || chk_held6.Checked)
             {
-                s.Append("<p style='font-size:smaller;'>*<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='22' />Noob des Tages, *<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='10' width='10' />Held des Tages<br /></p>");
+                s.Append("<p style='font-size:smaller;'>*<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />Noob des Tages, *<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' width='22' />Held des Tages<br /></p>");
             }
             //s.Append("</td></tr></table><br />");
             //TEXT B
@@ -398,7 +398,7 @@ namespace NewsGenerator
             }
             else
             {
-                chk_opponentfromtextbox.Checked = true;
+                chk_opponentfromtextbox.Checked = false;
             }
         }
 
