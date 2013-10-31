@@ -140,7 +140,7 @@ namespace NewsGenerator
 
             //ERG
             //s.Append("<table style='width: 95%;'><tr><td style='width: 50%;'>");
-            s.Append("<table style='border: 1px solid #b9b9b9; width: 95%; height: 0px;' frame='box' rules='none' border='1' cellpadding='1' cellspacing='0'>");
+            s.Append("<table style='border: 1px solid #b9b9b9; width: 100%; height: 0px;' frame='box' rules='none' border='1' cellpadding='1' cellspacing='0'>");
 
             s.Append("<tr style='height: 30px;background-color:lightgray;font-variant:small-caps;font-weight:bold;'><td style='text-align: center;'>");
             s.Append("WSB vs ");
