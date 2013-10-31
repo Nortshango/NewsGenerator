@@ -393,15 +393,12 @@ namespace NewsGenerator
         {
             if (chk_opponentfromtextbox.Checked == false)
             {
-                chk_opponentfromtextbox.Checked = true;
-                //dropdown_gegner.Enabled = false;
+              
 
             }
             else
             {
-                chk_opponentfromtextbox.Checked = false;
-                txt_gegner.Enabled = false;
-                //dropdown_gegner.Enabled = true;
+               
             }
         }
 
@@ -409,14 +406,11 @@ namespace NewsGenerator
         {
             if (chk_opponentfromdatabase.Checked == false)
             {
-                chk_opponentfromdatabase.Checked = true;
-                //dropdown_gegner.Enabled = true;
+             
             }
             else
             {
-                chk_opponentfromdatabase.Checked = false;
-                //dropdown_gegner.Enabled = false;
-                txt_gegner.Enabled = true;
+            
             }
         }
 
