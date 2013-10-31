@@ -103,6 +103,10 @@ namespace NewsGenerator
             dropdown_unmannered.DataSource = db.GetText("unmannered");
             dropdown_unmannered.DataValueField = db.GetText("unmannered").Tables[0].Columns[2].ToString();
             dropdown_unmannered.DataBind();
+
+            dropdown_thank.DataSource = db.GetText("thank");
+            dropdown_thank.DataValueField = db.GetText("thank").Tables[0].Columns[2].ToString();
+            dropdown_thank.DataBind();
         }
 
         protected void btn_genNews_Click(object sender, EventArgs e)
@@ -311,6 +315,10 @@ namespace NewsGenerator
             if (chk_unmannered.Checked)
             {
                 s.Append(dropdown_unmannered.SelectedItem.Value);
+            }
+            if (chk_thank.Checked)
+            {
+                s.Append(dropdown_thank.SelectedItem.Value);
             }
 
 

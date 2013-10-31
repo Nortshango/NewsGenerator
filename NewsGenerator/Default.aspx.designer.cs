@@ -409,6 +409,24 @@ namespace NewsGenerator {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_toolate;
         
         /// <summary>
+        /// chk_thank control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_thank;
+        
+        /// <summary>
+        /// dropdown_thank control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdown_thank;
+        
+        /// <summary>
         /// txt_Autor control.
         /// </summary>
         /// <remarks>

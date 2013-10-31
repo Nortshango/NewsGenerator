@@ -13,7 +13,7 @@
         <asp:Panel ID="Panel1" runat="server" BorderColor="DarkGray" BackColor="LightGray" CssClass="Panel">
            <div class="CSSTableGenerator">
             <table>
-                <tr><td colspan="4">News Generator Beta v0.05</td><td style="width:500px">Output</td></tr>
+                <tr><td colspan="4">News Generator Beta v0.06</td><td style="width:500px">Output</td></tr>
                 <tr>
                     <td><b>Liga:</b></td>
                     <td colspan="3"><asp:DropDownList ID="dropdown_liga" runat="server" DataTextField="Name"></asp:DropDownList></td>
@@ -86,6 +86,11 @@
                 <tr>
                      <td><asp:CheckBox ID="chk_toolate" runat="server" Text="zu spät" /></td>
                         <td colspan="3"><asp:DropDownList ID="dropdown_toolate" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
+                   
+                </tr>
+                <tr>
+                     <td><asp:CheckBox ID="chk_thank" runat="server" Text="Dank" /></td>
+                        <td colspan="3"><asp:DropDownList ID="dropdown_thank" runat="server" DataTextField="Shorttext"></asp:DropDownList></td>
                    
                 </tr>
                 <tr><td style="width:100px">Persönlicher Kommentar des Autors</td>
