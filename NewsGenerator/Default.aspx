@@ -13,12 +13,12 @@
         <asp:Panel ID="Panel1" runat="server" BorderColor="DarkGray" BackColor="LightGray" CssClass="Panel">
            <div class="CSSTableGenerator">
             <table>
-                <tr><td colspan="4">News Generator Beta v0.13</td><td style="width:500px">Output</td></tr>
+                <tr><td colspan="4">News Generator Beta v0.14</td><td style="width:500px">Output</td></tr>
                 <tr>
                     <td><b>Liga:</b></td>
                     <td colspan="3"><asp:DropDownList ID="dropdown_liga" runat="server" DataTextField="Name"></asp:DropDownList></td>
                     
-                    <td rowspan="12">
+                    <td rowspan="13">
                         <asp:TextBox ID="txtbox_output" runat="server" TextMode="MultiLine" ReadOnly="false" Height="449px" Width="497px" TabIndex="20" ValidateRequestMode="Disabled"></asp:TextBox></td>
                 </tr>
                 <tr>
