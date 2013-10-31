@@ -127,7 +127,7 @@ namespace NewsGenerator
             {
                 s.Append(dropdown_gegner.SelectedItem.Text);
             }
-            else {
+            if (chk_opponentfromtextbox.Checked) {
                 s.Append(txtbox_output.Text);
             }
             s.Append(": "); 
@@ -175,11 +175,11 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_1v1_1.SelectedItem.Text);
             if (chk_held1.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='20' width='20' />");
             }
             if (chk_noob1.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
             DataSet ds = db.GetRace(dropdown_spieler_1v1_1.SelectedItem.Text);
@@ -195,11 +195,11 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_1v1_2.SelectedItem.Value);
             if (chk_held2.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='20' width='20' />");
             }
             if (chk_noob2.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_2.SelectedItem.Text);
@@ -215,11 +215,11 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_1v1_3.SelectedItem.Value);
             if (chk_held3.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='20' width='20' />");
             }
             if (chk_noob3.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_3.SelectedItem.Text);
@@ -235,11 +235,11 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_1v1_4.SelectedItem.Value);
             if (chk_held4.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='20' width='20' />");
             }
             if (chk_noob4.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
             s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_4.SelectedItem.Text);
@@ -255,21 +255,21 @@ namespace NewsGenerator
             s.Append(dropdown_spieler_2v2_1.SelectedItem.Value);
             if (chk_held5.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='20' width='20' />");
             }
             if (chk_noob5.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
             s.Append(" & ");
             s.Append(dropdown_spieler_2v2_2.SelectedItem.Value);
             if (chk_held6.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='20' width='20' />");
             }
             if (chk_noob6.Checked)
             {
-                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />");
+                s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
             s.Append("</td><td style='text-align:center;'>");
             s.Append("<img height='20px' width='20px' src='images/ranking/");
@@ -293,7 +293,7 @@ namespace NewsGenerator
 
             if (chk_held1.Checked || chk_held2.Checked || chk_held3.Checked || chk_held4.Checked || chk_held5.Checked || chk_held6.Checked)
             {
-                s.Append("<p style='font-size:smaller;'>*<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='10' width='10' />Noob des Tages, *<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='10' width='10' />Held des Tages<br /></p>");
+                s.Append("<p style='font-size:smaller;'>*<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='15' width='15' />Noob des Tages, *<img src='http://s1.directupload.net/images/131031/xzxib6fu.png' height='10' width='10' />Held des Tages<br /></p>");
             }
             //s.Append("</td></tr></table><br />");
             //TEXT B
