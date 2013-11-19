@@ -272,12 +272,12 @@ namespace NewsGenerator
                 s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
             s.Append("</td><td style='text-align:center;'>");
-            s.Append("<img height='20px' width='20px' src='images/ranking/");
+            s.Append("<img height='20px' width='20px' src='/images/ranking/");
             ds = db.GetRace(dropdown_spieler_2v2_1.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
             s.Append(".png' />");
-            s.Append("<img height='20px' width='20px' src='images/ranking/");
+            s.Append("<img height='20px' width='20px' src='/images/ranking/");
             ds = db.GetRace(dropdown_spieler_2v2_2.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
