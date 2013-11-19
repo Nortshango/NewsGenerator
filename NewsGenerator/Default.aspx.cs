@@ -181,7 +181,7 @@ namespace NewsGenerator
             {
                 s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
-            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
+            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='/images/ranking/");
             DataSet ds = db.GetRace(dropdown_spieler_1v1_1.SelectedItem.Text);
             DataRow dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
@@ -201,7 +201,7 @@ namespace NewsGenerator
             {
                 s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
-            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
+            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='/images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_2.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
@@ -221,7 +221,7 @@ namespace NewsGenerator
             {
                 s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
-            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
+            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='/images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_3.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
@@ -241,7 +241,7 @@ namespace NewsGenerator
             {
                 s.Append("<img src='http://s1.directupload.net/images/131031/opbgw8ui.png' height='20' width='20' />");
             }
-            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='images/ranking/");
+            s.Append("</td><td style='text-align:center;'><img height='20px' width='20px' src='/images/ranking/");
             ds = db.GetRace(dropdown_spieler_1v1_4.SelectedItem.Text);
             dr = ds.Tables[0].Rows[0];
             s.Append(dr["Race"]);
